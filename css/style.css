@@ -192,14 +192,21 @@ h1 span { color: var(--teal-600); }
 
 /* Reviews */
 .reviews-section { background: var(--sand-100); }
-.review-card {
-  max-width: 520px; margin: 40px auto 0; text-align: center;
-  background: #fff; border-radius: var(--radius-lg); padding: 40px 32px;
-  box-shadow: var(--shadow-sm);
+
+.testimonials {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 22px; margin-top: 46px;
 }
-.review-stars { display: flex; justify-content: center; gap: 6px; color: #f5a623; margin-bottom: 16px; }
-.review-stars svg { width: 26px; height: 26px; }
-.review-copy { margin-bottom: 22px; }
+.testimonial {
+  background: #fff; border-radius: var(--radius-md); padding: 28px 26px;
+  box-shadow: var(--shadow-sm); display: flex; flex-direction: column;
+}
+.testimonial-stars { display: flex; gap: 4px; color: #f5a623; margin-bottom: 14px; }
+.testimonial-stars svg { width: 18px; height: 18px; }
+.testimonial-quote { font-size: .92rem; line-height: 1.65; flex: 1; }
+.testimonial-name { margin: 14px 0 0; font-weight: 700; color: var(--ink-900); }
+
+.reviews-cta { text-align: center; margin-top: 40px; }
 
 /* Contact */
 .contact-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 46px; }
