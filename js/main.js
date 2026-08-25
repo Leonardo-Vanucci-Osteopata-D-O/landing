@@ -1,5 +1,14 @@
 document.getElementById('year').textContent = new Date().getFullYear();
 
+// WhatsApp click tracking
+document.querySelectorAll('[data-wa-location]').forEach((link) => {
+  link.addEventListener('click', () => {
+    if (typeof gtag === 'function') {
+      gtag('event', 'whatsapp_click', { location: link.dataset.waLocation });
+    }
+  });
+});
+
 // Mobile nav toggle
 const navToggle = document.getElementById('navToggle');
 const mainNav = document.getElementById('main-nav');
